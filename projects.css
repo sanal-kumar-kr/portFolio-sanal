@@ -1,0 +1,173 @@
+body{
+    padding: 0;
+    margin: 0;
+    background:black !important;
+}
+.nav-link{
+    color:white !important;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.navbar{
+    background-color: black !important;
+}
+.bg-image {
+    position: absolute;
+    top: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    margin-bottom: 20px;
+    color: #fff;
+    user-select: none;
+    margin-top: 20%;
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    perspective: 1000px;
+  }
+  
+  .wrapper .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .wrapper .card .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+  }
+  
+  .wrapper .card .image.front {
+    transform: rotateY(0);
+  }
+  
+  .wrapper .card .image.back {
+    transform: rotateY(180deg);
+  }
+  
+  .wrapper .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .wrapper .nav-btn ion-icon {
+    font-size: 3rem;
+    color: #4191fa;
+  }
+  
+  .wrapper .nav-btn.back {
+    left: -60px;
+  }
+  
+  .wrapper .nav-btn.next {
+    right: -60px;
+  }
+  
+  .paginations {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  
+  .paginations .pagi-btn {
+    width: 4px;
+    height: 4px;
+    background: #cbd5e1;
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  .paginations .pagi-btn.active {
+    background: #4191fa;
+  }
+  .card-title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  .card-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+
+  }
+  .description-container .card{
+    background-color: rgba(255, 255, 255, 0.101);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+    
+  }
+  .coustom-bg-color{
+    background-image:radial-gradient(rgba(255, 255, 255, 0.242), rgba(0, 0, 0, 0.144));
+}
+
+.description-container .card{
+  transition: transform 0.5s ease-in-out;
+
+}
+.description-container .card:hover {
+  transform: scale(1.1); 
+ 
+}
+.card-link{
+  font-size: 20px;
+  text-align: center;
+}
+.card-text{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: justify;
+}
