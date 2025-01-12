@@ -14,7 +14,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-          <a class="navbar-brand title-text" href="#"><h1>SanalKumar KR</h1></a>
+        <a class="navbar-brand title-text" href="#"><div class="Logo-div"></div></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,111 +28,84 @@
           </div>
       </div>
   </nav>
-    <div class="container description-container  mt-5">
-      <div class="card w-100" >
-        <div class="card-body text-center">
-          <h1 class="card-title">Task Management System</h1>
-          <p class="card-text">The Admin and Staff Task Management System is designed to streamline project management by allowing admins and staff to effectively collaborate on projects, tasks, and subtasks. It provides tools for tracking progress, setting priorities, and managing deadlines, ensuring productivity and accountability.
-
-            The system is developed with a front-end powered by HTML, CSS, and JavaScript, ensuring a responsive and user-friendly interface. The back-end is built using CodeIgniter, a PHP framework known for its speed and flexibility, enabling robust and scalable operations.</p>
-          <a href="https://github.com/sanal-kumar-kr/Task-Management-System" target="_blank" class=" card-link text-decoration-none ">https://github.com/sanal-kumar-kr/Task-Management-System</a>
-        </div>
-      </div>
+    
+  <div class="container coustom-bg-color mt-5">
+    <!-- Row 1 -->
+    <div class="general-container">
+      <input class="radio" type="radio" name="card" id="cardUno" checked />
+      <label class="content" for="cardUno">
+        <h1 class="title-card">
+          <span class="marg-bott">EXAMPLE TITLE OF MY CARD</span>
+          <span class="subtitle">EXAMPLE SOME SUBTITLE OR HEADER</span>
+        </h1>
+        <h3 class="card-title subsubtitle">
+          <span>EXAMPLE SOME ADDITIONS</span>
+        </h3>
+      </label>
+  
+      <input class="radio" type="radio" name="card" id="cardDos" />
+      <label class="content" for="cardDos">
+        <h1 class="title-card">
+          <span class="marg-bott">EXAMPLE TITLE OF MY CARD</span>
+          <span class="subtitle">EXAMPLE SOME SUBTITLE OR HEADER</span>
+        </h1>
+        <h3 class="card-title subsubtitle">
+          <span>EXAMPLE SOME ADDITIONS</span>
+        </h3>
+      </label>
+  
+      <input class="radio" type="radio" name="card" id="cardTres" />
+      <label class="content" for="cardTres">
+        <h1 class="title-card">
+          <span class="marg-bott">EXAMPLE TITLE OF MY CARD</span>
+          <span class="subtitle">EXAMPLE SOME SUBTITLE OR HEADER</span>
+        </h1>
+        <h3 class="card-title subsubtitle">
+          <span>EXAMPLE SOME ADDITIONS</span>
+        </h3>
+      </label>
     </div>
-    <div class="container">
-      <img src="./tms.png" alt="" id="bgImage" class="bg-image img-fluid mt-5" />
-      <div class="container ">
-        <div class="heading">
-          <div>
-            <script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2783044520727903"
-              crossorigin="anonymous"
-            ></script>
-            <ins
-              class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-2783044520727903"
-              data-ad-slot="3576734658"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>
-          <div class="wrapper">
-            <div id="card" class="card">
-              
-              <img
-                src="./tms.png"
-                alt=""
-                id="imageFront"
-                class="image front img-fluid"
-              />
-              <img
-                src="./tms.png"
-                alt=""
-                id="imageBack"
-                class="image back img-fluid"
-              />
-            </div>
-            <button type="button" class="nav-btn back" onclick="back()">
-              <ion-icon name="chevron-back"></ion-icon>
-            </button>
-            <button type="button" class="nav-btn next" onclick="next()">
-              <ion-icon name="chevron-forward"></ion-icon>
-            </button>
-          </div>
-          <div class="paginations"></div>
-        </div>
-      </div>
+  
+    <!-- Row 2 -->
+    <div class="general-container">
+      <input class="radio" type="radio" name="card" id="cardFour" />
+      <label class="content" for="cardFour">
+        <h1 class="title-card">
+          <span class="marg-bott">EXAMPLE TITLE OF MY CARD</span>
+          <span class="subtitle">EXAMPLE SOME SUBTITLE OR HEADER</span>
+        </h1>
+        <h3 class="card-title subsubtitle">
+          <span>EXAMPLE SOME ADDITIONS</span>
+        </h3>
+      </label>
+  
+      <input class="radio" type="radio" name="card" id="cardFive" />
+      <label class="content" for="cardFive">
+        <h1 class="title-card">
+          <span class="marg-bott">EXAMPLE TITLE OF MY CARD</span>
+          <span class="subtitle">EXAMPLE SOME SUBTITLE OR HEADER</span>
+        </h1>
+        <h3 class="card-title subsubtitle">
+          <span>EXAMPLE SOME ADDITIONS</span>
+        </h3>
+      </label>
+  
+      <input class="radio" type="radio" name="card" id="cardSix" />
+      <label class="content" for="cardSix">
+        <h1 class="title-card">
+          <span class="marg-bott">EXAMPLE TITLE OF MY CARD</span>
+          <span class="subtitle">EXAMPLE SOME SUBTITLE OR HEADER</span>
+        </h1>
+        <h3 class="card-title subsubtitle">
+          <span>EXAMPLE SOME ADDITIONS</span>
+        </h3>
+      </label>
     </div>
+  </div>
+  
       
     <script src="./popper.min.js"></script>
     <script src="./bootstrap.bundle.min.js"></script>
-    <script src="./index.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script>
-      try {
-        fetch(
-          new Request(
-            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-            { method: "HEAD", mode: "no-cors" }
-          )
-        )
-          .then(function (response) {
-            return true;
-          })
-          .catch(function (e) {
-            var carbonScript = document.createElement("script");
-            carbonScript.src =
-              "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
-            carbonScript.id = "_carbonads_js";
-            document.getElementById("carbon-block").appendChild(carbonScript);
-          });
-      } catch (error) {
-        console.log(error);
-      }
-    </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-LLWL5N9CSM");
-    </script>
+   
   </body>
 </html>

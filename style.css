@@ -3,11 +3,13 @@ body{
     margin: 0;
     background:black !important;
 }
+html { font-size: calc(0.5em + 0.5vw); }
+
 .nav-link{
     color:white !important;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1rem;
 }
 .navbar{
     background-color: black !important;
@@ -63,9 +65,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.title-text{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+
 /* .canvas-wrapper{
     height: 50px;
 } */
@@ -170,4 +170,16 @@ body{
   /* Set a fixed height for the carousel */
 .back-end{
   padding:10% ;
+}
+.highlight{
+  color: rgb(219, 100, 26);
+  font-size: 3rem !important;
+}
+.Logo-div{
+  height: 20vh;
+  width: 20vh;
+  background-image: url(./Logo-me.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }

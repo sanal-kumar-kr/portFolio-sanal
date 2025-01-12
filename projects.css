@@ -12,162 +12,146 @@ body{
 .navbar{
     background-color: black !important;
 }
-.bg-image {
-    position: absolute;
-    top: -1;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 15px;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 5px;
-    margin-bottom: 20px;
-    color: #fff;
-    user-select: none;
-    margin-top: 20%;
-  }
-  
-  .wrapper {
-    position: relative;
-    width: 320px;
-    height: 320px;
-    perspective: 1000px;
-  }
-  
-  .wrapper .card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
-    transform: rotateY(0);
-    transform-style: preserve-3d;
-    transition: transform 1s;
-  }
-  
-  .wrapper .card .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-    backface-visibility: hidden;
-  }
-  
-  .wrapper .card .image.front {
-    transform: rotateY(0);
-  }
-  
-  .wrapper .card .image.back {
-    transform: rotateY(180deg);
-  }
-  
-  .wrapper .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .wrapper .nav-btn ion-icon {
-    font-size: 3rem;
-    color: #4191fa;
-  }
-  
-  .wrapper .nav-btn.back {
-    left: -60px;
-  }
-  
-  .wrapper .nav-btn.next {
-    right: -60px;
-  }
-  
-  .paginations {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-  }
-  
-  .paginations .pagi-btn {
-    width: 4px;
-    height: 4px;
-    background: #cbd5e1;
-    border-radius: 50%;
-    transition: 0.8s;
-  }
-  
-  .paginations .pagi-btn.active {
-    background: #4191fa;
-  }
-  .card-title{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-  }
-  .card-text{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    color: white;
-    text-align: center;
 
-  }
-  .description-container .card{
-    background-color: rgba(255, 255, 255, 0.101);
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
-    
-  }
-  .coustom-bg-color{
-    background-image:radial-gradient(rgba(255, 255, 255, 0.242), rgba(0, 0, 0, 0.144));
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Add spacing between rows */
 }
 
-.description-container .card{
-  transition: transform 0.5s ease-in-out;
+.general-container {
+  display: flex;
+  height: 40rem;
+  justify-content: center;
+  gap: 1rem; /* Add spacing between cards */
+}
+.radio {
+  display: none;
+}
+
+.content {
+  background: transparent;
+  background-image: url(./ehr.png);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3rem;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.05, 0.60, 0.39, 0.94);
+}
+
+.content::before {
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.content:hover {
+  box-shadow: 0.7rem 0.7rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.content:nth-of-type(2) {
+  background: transparent;
+  background-image: url("https://images.unsplash.com/photo-1727014588962-0bba80d5959e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content:nth-of-type(3) {
+  background: transparent;
+  background-image: url("https://images.unsplash.com/photo-1728140161956-3cf6462f2f12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content:nth-of-type(4) {
+  background: transparent;
+  background-image: url("https://images.unsplash.com/photo-1726672458981-b4882850d020?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-title {
+  bottom: 1.2rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  left: 1.5rem;
+  line-height: 1.1;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(2rem);
+  transition: 290ms cubic-bezier(0.05, 0.62, 0.40, 0.95) 300ms;
+  transition-property: opacity, transform;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.title-card{
+  top: 2rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  left: 1.5rem;
+  line-height: 1.1;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(2rem);
+  transition: 290ms cubic-bezier(0.05, 0.60, 0.42, 0.94) 300ms;
+  transition-property: opacity, transform;
+  user-select: none;
+  white-space: nowrap;
 
 }
-.description-container .card:hover {
-  transform: scale(1.1); 
- 
+
+.subtitle {
+  font-size: 1rem;
 }
-.card-link{
-  font-size: 20px;
-  text-align: center;
+
+.subsubtitle{
+  font-size: 0.85rem;
 }
-.card-text{
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: justify;
+
+.paddT{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
+
+.radio:checked + .content {
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.3);
+  flex: 9;
+}
+
+.radio:checked + .content > .card-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.radio:checked + .content > .title-card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.marg-bott{
+  margin-bottom: 1.5rem;
+}
+
