@@ -1,7 +1,7 @@
 {
   "particles": {
     "density": 150,
-    "color": "#DB641A",
+    "color": "#00FFFF",
     "size": {
       "value": 1,
       "random": false
@@ -30,7 +30,7 @@
   },
   "image": {
     "src": {
-      "path": "./arrow.png",
+      "path": "./CodeSets-removebg-preview.png",
       "is_external": false
     },
     "size": {

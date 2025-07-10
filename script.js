@@ -1,31 +1,30 @@
-let currentSectionIndex = 0;
-        const sections = ['#technical-experience', '#teaching-experience','#freelance-experience'];
+  const cards = document.querySelectorAll('.card-experience');
 
-        function showSection(index) {
-            // Hide all sections
-            sections.forEach(section => {
-                document.querySelector(section).classList.remove('active');
-            });
-            // Show the selected section
-            document.querySelector(sections[index]).classList.add('active');
-            // Enable/Disable buttons
-            document.getElementById('prev-btn').disabled = index === 0;
-            document.getElementById('next-btn').disabled = index === sections.length - 1;
-        }
+  function revealCards() {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        card.classList.add('reveal');
+      }
+    });
+  }
 
-        document.getElementById('next-btn').addEventListener('click', () => {
-            if (currentSectionIndex < sections.length - 1) {
-                currentSectionIndex++;
-                showSection(currentSectionIndex);
-            }
-        });
+  // Reveal on scroll or load
+  window.addEventListener('scroll', revealCards);
+  window.addEventListener('load', revealCards);
 
-        document.getElementById('prev-btn').addEventListener('click', () => {
-            if (currentSectionIndex > 0) {
-                currentSectionIndex--;
-                showSection(currentSectionIndex);
-            }
-        });
+  // Always trigger on hashchange
+  window.addEventListener('hashchange', () => {
+    setTimeout(revealCards, 300);
+  });
 
-        // Initialize the first section
-        showSection(currentSectionIndex);
+  // Extra: Listen to any click on #experience link
+  document.querySelectorAll('a[href="#experience"]').forEach(link => {
+    link.addEventListener('click', () => {
+      // Scroll manually (force it to scroll slightly)
+      window.scrollBy(0, -1); // tiny scroll to trigger scroll event
+      setTimeout(() => {
+        revealCards();
+      }, 100);
+    });
+  });

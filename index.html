@@ -9,67 +9,712 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
+  <style>
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+    
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Contact Info Bar -->
+<div class="contact-bar  text-white py-1 px-3 d-flex justify-content-between align-items-center">
+  <div class="contact-left">
+    <i class="fas fa-phone-alt me-2"></i> +91 7034687678
+  </div>
+  <div class="contact-right">
+    <i class="fas fa-envelope me-2"></i> sanalkumar28082002@gmail.com
+  </div>
+</div>
+
+  <nav class="navbar navbar-expand-lg" id="navigation">
     <div class="container-fluid">
       <a class="navbar-brand title-text" href="#"><div class="Logo-div"></div></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto me-5">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-              </ul>
+           <ul class="navbar-nav ms-auto me-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#index">
+                <i class="fas fa-home me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">
+                <i class="fas fa-briefcase me-1"></i>Experience
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">
+                <i class="fas fa-concierge-bell me-1"></i>Services
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">
+                <i class="fas fa-code me-1"></i>Skills
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">
+                <i class="fas fa-project-diagram me-1"></i>Projects
+              </a>
+            </li>
+            <!-- LinkedIn -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/sanal-kumar-4a486131b/" target="_blank">
+                <i class="fab fa-linkedin me-1"></i>LinkedIn
+              </a>
+            </li>
+            <!-- GitHub -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/sanal-kumar-kr" target="_blank">
+                <i class="fab fa-github me-1"></i>GitHub
+              </a>
+            </li>
+          </ul>
+
         </div>
     </div>
 </nav>
-  <div class="container ">
-  <section class="content-wrapper h-100 coustom-bg-color mt-5">
-      <div class="row ">
-        <div class="col-md-6 p-5 text-center mt-5">
-          
-         <h1 class="text-white ">I'm Sanal Kumar KR</h1>
-         <h2 class="text-white">Software Developer</h2>
-         <a href="./Sanal_Kumar_KR_Resume.pdf" download class="btn resume text-white">Download Resume</a>
-         <div class="mt-5">
-          <h5 class="text-white">Connect Me</h5>
-          <a href="https://www.linkedin.com/in/sanal-kumar-4a486131b/" target="_blank"><i class="fab fa-linkedin text-white fs-1"></i></a>  
-            <a href="https://github.com/sanal-kumar-kr" target="_blank"><i class="fab fa-github text-white fs-1"></i></a>
-         </div>
-        </div>
-        <div class="col-md-4">
-          <div class="my-image p-5 ">
-            <img src="./Sanal.png" alt="Loading....." class="rounded img-fluid image-custom-height">
+  <section class="content-wrapper h-100 coustom-bg-color mt-5" id="index">
+    <div class="row">
+      <!-- LEFT SIDE -->
+      <div class="col-md-6 p-5 text-center mt-5 fall-down">
+        <h1 class="name-title">SANAL KUMAR KR</h1>
+        <h2 class=" mb-3 designation-title">Software Developer</h2>
+
+        <!-- Description -->
+        <p class="text-white mb-4 px-3 custom-justify">
+          I’m a passionate developer focused on crafting efficient backend systems and clean user experiences.
+          With strong skills in Laravel, Codeigniter, and Django, I bring ideas to life through code that’s not just functional, but scalable and impactful.
+        </p>
+
+        <!-- Resume Button -->
+        <a href="./Sanal_Kumar_KR_Resume.pdf" download class="btn resume ">
+          <i class="fas fa-download me-2"></i>Download Resume
+        </a>
+        <div id="particle-image" data-params-src="./params.json" class="text-wrap"></div>
+
+        <!-- Social Icons -->
+        <!-- <div>
+          <h5 class="text-white mb-3">Connect Me</h5>
+          <a href="https://www.linkedin.com/in/sanal-kumar-4a486131b/" target="_blank" class="me-3">
+            <i class="fab fa-linkedin text-white fs-1"></i>
+          </a>
+          <a href="https://github.com/sanal-kumar-kr" target="_blank">
+            <i class="fab fa-github text-white fs-1"></i>
+          </a>
+        </div> -->
+      </div>
+
+      <!-- RIGHT SIDE -->
+   <div class="col-md-6 d-flex justify-content-center align-items-center position-relative my-image-wrapper">
+  
+  <!-- Aqua Background Code (reduced blur) -->
+  <div class="code-bg">
+    <pre>
+# Python (Django - views.py)
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+from .models import User
+
+class UserViewSet(ViewSet):
+    def list(self, request):
+        users = User.objects.all().values('id', 'username', 'email', 'date_joined')
+        return Response({"status": True, "data": list(users)})
+
+# CodeIgniter (UserController.php)
+public function fetch_users() {
+    $this->load->model('User_model');
+    $result = $this->User_model->get_users_with_roles_and_permissions(); // long function
+    echo json_encode(['status' => true, 'data' => $result]);
+}
+
+# Laravel (UserController.php)
+public function index() {
+    $users = User::select('id', 'name', 'email', 'created_at', 'role')->with('profile')->get();
+    return response()->json(['success' => true, 'users' => $users]);
+}
+
+# JavaScript (AJAX with headers)
+fetch('/api/users', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer your_jwt_token_here',
+    'Content-Type': 'application/json'
+  }
+})
+.then(res => res.json())
+.then(data => {
+  console.log('Users fetched successfully:', data);
+});
+
+    </pre>
+  </div>
+
+  <!-- Your Image -->
+  <img src="./Sanal.png" alt="Loading..." class="rounded img-fluid image-custom-height">
+</div>
+
+    </div>
+  </section>
+
+<div class="content-wrapper p-5" >
+<section class="container mt-5 " id="experience">
+  <h2 class="main-heading text-center mb-5">
+    <span class="highlight fs-1">Professional Experience</span> 
+  </h2>
+  <div class="row gy-4">
+
+    <!-- Column 1: Development -->
+    <div class="col-md-4 " data-aos="fade-up">
+      <div class="p-4 rounded shadow text-white h-100 card-experience">
+        <h4 class="text-aqua mb-3"><span class="sub-title-pre">Frontend</span> <span class="sub-title-post">Development</span> </h4>
+        <ul class="small">
+          <li>HTML, CSS, JS, jQuery, Bootstrap</li>
+          <li>Learning WordPress for dynamic sites</li>
+          <li>Built responsive, clean UI/UX designs</li>
+        </ul>
+        <h4 class="text-aqua mt-4 mb-3"><span class="sub-title-pre">Android (Java)</span></h4>
+        <ul class="small">
+          <li>Built native Android apps</li>
+          <li>Developed a Tech Fest app (Django REST + Android, S Grade)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Column 2: Backend -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="p-4 rounded shadow text-white h-100 card-experience">
+        <h4 class="text-aqua mb-3"><span class="sub-title-pre">Backend</span> <span class="sub-title-post">Development</span> </h4>
+        <ul class="small">
+          <li>Laravel (Freelance Projects & Self-learning)</li>
+          <li>Django & CodeIgniter for robust apps</li>
+          <li>Core PHP for custom backend logic</li>
+        </ul>
+        <h4 class="text-aqua mt-4 mb-3"><span class="sub-title-pre">API & </span><span class="sub-title-post">Auth</span></h4>
+        <ul class="small">
+          <li>RESTful API development experience</li>
+          <li>Implemented JWT Authentication</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Column 3: Work & Freelance -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="p-4  rounded shadow text-white h-100 card-experience">
+        <h4 class="text-aqua mb-3"><span class="sub-title-pre">Work & </span> <span class="sub-title-post">Freelancing</span></h4>
+        <ul class="small">
+          <li><strong>Software Developer at Ziuke Infotech</strong> (Thrissur)</li>
+          <li>Built & maintained the company website</li>
+          <li>Contributed to Anganwadi Stock Management client project</li>
+        </ul>
+        <h4 class="text-aqua mt-4 mb-3"><span class="sub-title-pre">Student</span> <span class="sub-title-post">Projects</span></h4>
+        <ul class="small">
+          <li>Guided 20+ student academic projects</li>
+          <li>Mentored in Python, PHP, and frameworks</li>
+          <li>Organized internship training sessions</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<div class="content-wrapper">
+  <!-- My Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-white mb-4"><span class="highlight fs-1">MY SERVICES</span> </h2>
+    <div class="row g-4">
+
+      <!-- Academic Works -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-white" >
+          <div class="card-body">
+            <h4 class="card-title"><i class="fas fa-graduation-cap me-2"></i>Academic Project Assistance</h4>
+            <p class="card-text">I help students develop mini and major academic projects using Django, Laravel, CodeIgniter, and Android.</p>
           </div>
         </div>
       </div>
-      <!-- <div class="container canvas-wrapper">
-        <div class="row">
-         
-          <div class="col-md-12 col-sm-12 col-lg-12 col-12 "> -->
-          <!-- </div>
+
+      <!-- Web App Development -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-white" >
+          <div class="card-body">
+            <h4 class="card-title"><i class="fas fa-laptop-code me-2"></i>Web Applications</h4>
+            <p class="card-text">Custom web apps with backend & API integration using Django REST, Laravel, or CodeIgniter.</p>
+          </div>
         </div>
-      </div> -->
-  </section>
-  <div id="particle-image" data-params-src="./params.json" class="text-wrap"></div>
+      </div>
+
+      <!-- WordPress / Static Website -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-white" >
+          <div class="card-body">
+            <h4 class="card-title"><i class="fas fa-globe me-2"></i>Portfolio & Business Websites</h4>
+            <p class="card-text">Fast and responsive static websites or WordPress-powered solutions for personal or company use.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android Apps -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-white" >
+          <div class="card-body">
+            <h4 class="card-title"><i class="fab fa-android me-2"></i>Android Applications</h4>
+            <p class="card-text">Native Android apps using Java + Django REST backend with secure authentication & role management.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Stack Projects -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-white" >
+          <div class="card-body">
+            <h4 class="card-title"><i class="fas fa-server me-2"></i>Full-Stack Projects</h4>
+            <p class="card-text">Complete systems with frontend + backend + database + API integration including admin & user roles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Requests -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-white" style="background-color: rgba(0, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid #00ffff; border-radius: 15px;">
+          <div class="card-body">
+            <h4 class="card-title"><i class="fas fa-cogs me-2"></i>Custom Solutions</h4>
+            <p class="card-text">Have an idea? I can help you design and develop custom software tailored to your needs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 </div>
+ <div class="content-wrapper">
+  <div class="container my-5" id="skills">
+    <h2 class="main-heading text-center mb-5">
+      <span class="highlight fs-1">TECHNICAL SKILLS</span>
+    </h2>
 
-<footer class="bg-dark ">
-  <div class="container  p-5">
-    <div class="d-flex justify-content-center align-items-center">
-      <h1 class="text-white fs-5">&copy; 2025 All Rights Reserved | Sanal Kumar KR</h1>
+    <div class="row text-white">
+      <!-- Frontend -->
+      <div class="col-md-12 ">
+  <div class="carousel-wrapper">
+      <h1 class="text-aqua text-center">Frontend</h4>
+
+    <div class="carousel-container" id="carousel-frontend">
+      <div class="carousel-card">
+        <h5><i class="bi bi-code-slash me-2"></i>HTML / CSS</h5>
+        <p>Structure and style websites with modern responsive layouts.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-braces me-2"></i>JavaScript / jQuery</h5>
+        <p>Build interactive web apps using native JS and jQuery functions.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-layout-text-window-reverse me-2"></i>Bootstrap</h5>
+        <p>Quickly create responsive UIs using Bootstrap 5 classes & grid.</p>
+      </div>
+       
+    </div>
+  </div>
+</div>
+
+
+      <!-- Backend -->
+      <div class="col-md-12 ">
+  <div class="carousel-wrapper">
+      <h1 class="text-aqua text-center">Backend</h1>
+
+    <div class="carousel-container" id="carousel-backend">
+      
+      <div class="carousel-card">
+        <h5><i class="bi bi-file-code me-2"></i>PHP / Core PHP</h5>
+        <p>Build dynamic web systems using PHP with custom logic & CRUD.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-diagram-3 me-2"></i>Django (Python)</h5>
+        <p>Secure and scalable backend development using Django REST API.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-box me-2"></i>CodeIgniter</h5>
+        <p>Lightweight MVC framework for fast PHP development.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-lightning-charge me-2"></i>Laravel</h5>
+        <p>Currently learning advanced Laravel concepts like APIs, Jobs, Eloquent.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- APIs / DB / Tools -->
+      <div class="col-md-12 ">
+  <div class="carousel-wrapper">
+      <h1 class="text-aqua text-center">APIs, Tools & Platforms</h1>
+
+    <div class="carousel-container" id="carousel-tools">
+      <div class="carousel-card">
+        <h5><i class="bi bi-link-45deg me-2"></i>REST API & JWT Auth</h5>
+        <p>Experienced in secure APIs with token-based authentication.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-database me-2"></i>MySQL / DB</h5>
+        <p>Efficient database design, queries & data normalization.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-git me-2"></i>Git & Version Control</h5>
+        <p>Proficient in Git basics, GitHub repo management, team collaboration.</p>
+      </div>
+      <div class="carousel-card">
+        <h5><i class="bi bi-wordpress me-2"></i>WordPress</h5>
+        <p>Learning WordPress for dynamic CMS-based web development.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="content-wrapper">
+    <h2 class="main-heading text-center mb-4">
+    <span class="highlight fs-1 ">My Projects</span> 
+  </h2>
+  <div class="text-center mb-4">
+  <button class="btn btn-outline-info m-1 filter-btn" data-filter="all">All</button>
+  <button class="btn btn-outline-info m-1 filter-btn" data-filter="django">Django</button>
+  <button class="btn btn-outline-info m-1 filter-btn" data-filter="codeigniter">CodeIgniter</button>
+  <button class="btn btn-outline-info m-1 filter-btn" data-filter="wordpress">WordPress</button>
+  <button class="btn btn-outline-info m-1 filter-btn" data-filter="static">Static</button>
+  <button class="btn btn-outline-info m-1 filter-btn" data-filter="android">Android</button>
+</div>
+
+ <div class="container mt-5" id="projects">
+ 
+  <!-- Projects Grid -->
+  <div class="row" id="project-list">
+     <!-- Empower Her Rise -->
+  <div class="col-md-4 mb-4 project-card django">
+    <div class="card h-100 text-bg-dark card-body-projects" >
+      <img src="./ehr.png" class="card-img-top" alt="Empower Her Rise">
+      <div class="card-body">
+        <h5 class="card-title"><span class="project-title">Empower Her</span> Rise</h5>
+        <p class="card-text">Women empowerment platform with job listings, health support & hostel data.</p>
+        <button class="btn btn-info btn-sm view-more-btn">View More</button>
+        <div class="view-more-content mt-2" style="display: none;">
+          <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Festivers -->
+  <div class="col-md-4 mb-4 project-card django">
+    <div class="card h-100 text-bg-dark card-body-projects" >
+      <img src="./festiverse.png" class="card-img-top" alt="Festivers">
+      <div class="card-body">
+        <h5 class="card-title">Festivers</h5>
+        <p class="card-text">Event management system for handling college fests and schedules.</p>
+        <button class="btn btn-info btn-sm view-more-btn">View More</button>
+        <div class="view-more-content mt-2" style="display: none;">
+          <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Fest (MCA) -->
+  <div class="col-md-4 mb-4 project-card django">
+    <div class="card h-100 text-bg-dark card-body-projects" >
+      <img src="./techfest.png" class="card-img-top" alt="Tech Fest MCA">
+      <div class="card-body">
+        <h5 class="card-title">Tech Fest (MCA)</h5>
+        <p class="card-text">Manages tech fest activities in colleges with user role separation.</p>
+        <button class="btn btn-info btn-sm view-more-btn">View More</button>
+        <div class="view-more-content mt-2" style="display: none;">
+          <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question Paper Analysis -->
+  <div class="col-md-4 mb-4 project-card django">
+    <div class="card h-100 text-bg-dark card-body-projects" >
+      <img src="./question-paper-analysis.png" class="card-img-top" alt="Question Paper Analysis">
+      <div class="card-body">
+        <h5 class="card-title">Question Paper Analysis</h5>
+        <p class="card-text">ML-integrated app to analyze and predict repeated exam questions.</p>
+        <button class="btn btn-info btn-sm view-more-btn">View More</button>
+        <div class="view-more-content mt-2" style="display: none;">
+          <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nammude Thrissur -->
+  <div class="col-md-4 mb-4 project-card django">
+    <div class="card h-100 text-bg-dark card-body-projects" >
+      <img src="./evt.png" class="card-img-top" alt="Nammude Thrissur">
+      <div class="card-body">
+        <h5 class="card-title">Nammude Thrissur</h5>
+        <p class="card-text">A city-based event organizing portal focused on Thrissur.</p>
+        <button class="btn btn-info btn-sm view-more-btn">View More</button>
+        <div class="view-more-content mt-2" style="display: none;">
+          <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 6. Employee Attendance -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./eatt.png" class="card-img-top" alt="Employee Attendance">
+    <div class="card-body">
+      <h5 class="card-title">Employee Attendance</h5>
+      <p class="card-text">Project tracking and attendance via facial recognition.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap | ML integrated by another dev.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. Hire Itiens -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./hit.png" class="card-img-top" alt="Hire Itiens">
+    <div class="card-body">
+      <h5 class="card-title">Hire Itiens</h5>
+      <p class="card-text">Connect job seekers, companies, and colleges through one platform.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>MCA Final Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. Tech Fest (BTech) -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./techfest-mini.png" class="card-img-top" alt="Tech Fest BTech">
+    <div class="card-body">
+      <h5 class="card-title">Tech Fest (BTech Mini Project)</h5>
+      <p class="card-text">Arts & Tech fest management for college events and participants.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>BTech Mini Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. Government Appointment System -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects " >
+    <img src="./g-appointment.png" class="card-img-top" alt="Government Appointment System"  style="height: 200px; object-fit: contain;">
+    <div class="card-body">
+      <h5 class="card-title">Govt Appointment System</h5>
+      <p class="card-text">Mobile + Web app to schedule and manage government appointments.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>BTech Major Project | Backend: Django | Frontend: Android (Java) | MySQL</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10. Elderly Care -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./cfy.png" class="card-img-top" alt="Elderly Care" style="height: 200px; object-fit: contain;">
+    <div class="card-body ">
+      <h5 class="card-title">Elderly Care</h5>
+      <p class="card-text">Helps elderly people track medicine time, health status & emergency alerts.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>BTech Major Project | Backend: Django | Frontend: Android (Java) | MySQL</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 11. Tour and Travel System -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./tat.png" class="card-img-top" alt="Tour and Travel System" style="height: 200px; object-fit: contain;">
+    <div class="card-body">
+      <h5 class="card-title">Tour and Travel System</h5>
+      <p class="card-text">Tour management system for booking buses, hotels, and packages.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>BCA Major Project | Backend: Django | Frontend: Android (Java) | MySQL</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 12. House Price Prediction -->
+<div class="col-md-4 mb-4 project-card django">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./price-prediction.png" class="card-img-top" alt="House Price Prediction">
+    <div class="card-body">
+      <h5 class="card-title">House Price Prediction</h5>
+      <p class="card-text">Web app to predict house prices & enable buy/sell chat between users.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>MCA Project | Django, HTML, CSS, JS, jQuery, MySQL, Bootstrap | ML integrated by another dev.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 13. Law for Indians Website Template (Static) -->
+<div class="col-md-4 mb-4 project-card static">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./LFI.png" class="card-img-top" alt="Law for Indians Template">
+    <div class="card-body">
+      <h5 class="card-title">Law for Indians (Template)</h5>
+      <p class="card-text">Static responsive legal site template made using only frontend technologies.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>HTML, CSS, JavaScript – Project template only (no backend).</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 14. Simple WordPress Website -->
+<div class="col-md-4 mb-4 project-card wordpress">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./wordpress-static.png" class="card-img-top" alt="WordPress Website">
+    <div class="card-body">
+      <h5 class="card-title">Simple WordPress Website</h5>
+      <p class="card-text">Basic blog/information website using WordPress CMS and custom theme.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>Built with WordPress CMS using theme editor – suitable for static or blog use cases.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 15. Anganwadi Stock Management (CodeIgniter) -->
+<div class="col-md-4 mb-4 project-card codeigniter">
+  <div class="card h-100 text-bg-dark card-body-projects" >
+    <img src="./anganwadi.png" class="card-img-top" alt="Anganwadi Stock System">
+    <div class="card-body">
+      <h5 class="card-title">Anganwadi Stock Management</h5>
+      <p class="card-text">Manage food/raw material stocks for anganwadis – built for a client.</p>
+      <button class="btn btn-info btn-sm view-more-btn">View More</button>
+      <div class="view-more-content mt-2" style="display: none;">
+        <p>Client Project | CodeIgniter, HTML, CSS, JS, Bootstrap, MySQL.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Add the remaining projects in the same format -->
+    <!-- ... Task Management, Nammude Thrissur, Festiverse, Attendance, Hire Itiens ... -->
+
+  </div>
+</div>
+</div>
+<!-- Filter & View More Script -->
+
+<!-- Floating Navigation Button -->
+<button class="floating-nav-btn" id="toggleCircleNav">
+  <i class="bi bi-arrow-down-short"></i>
+</button>
+
+<!-- Circular Navigation Menu -->
+<div class="circle-menu" id="circleMenu">
+  <a href="#footer" id="scrollToggle">
+    <i class="bi bi-arrow-down-short" id="scrollIcon"></i>
+  </a>
+
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#index">About</a>
+  <a href="#skills">Skills</a>
+</div>
+ 
+
+
+<footer class="transparent text-white pt-5 pb-3" id="footer">
+  <div class="container">
+    <div class="row">
+      
+      <!-- About / Name -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-aqua">Sanal Kumar KR</h5>
+        <p>Passionate software developer with expertise in Django, Laravel, CodeIgniter, Android, and modern web technologies. Crafting meaningful solutions with clean UI & robust backend.</p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-aqua">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#index" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#experience" class="text-white text-decoration-none">Experience</a></li>
+          <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+
+          <li><a href="#skills" class="text-white text-decoration-none">Skills</a></li>
+          <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4 contact-div">
+        <h5 class="text-aqua">Contact</h5>
+        <p><i class="bi bi-envelope me-2"></i> sanalkumar28082002@gmail.com</p>
+        <p><i class="bi bi-phone me-2"></i> +91 7034687678</p>
+        <p><i class="bi bi-geo-alt me-2"></i> Thrissur, Kerala, India</p>
+
+        <!-- Social Icons -->
+        <div class="mt-3">
+          <a href="https://www.linkedin.com/in/sanalkumarkr" class="text-white me-3" target="_blank"><i class="bi bi-linkedin fs-5"></i></a>
+          <a href="https://github.com/sanalkumarkr" class="text-white me-3" target="_blank"><i class="bi bi-github fs-5"></i></a>
+          <a href="mailto:sanalkumarkr28082002@gmail.com" class="text-white" target="_blank"><i class="bi bi-envelope-fill fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="text-center mt-4 border-top pt-3">
+      <p class="mb-0 text-muted fs-6">&copy; 2025 All Rights Reserved | <strong>Sanal Kumar KR</strong></p>
     </div>
   </div>
 </footer>
+
 <script src="./popper.min.js"></script>
   <script src="./bootstrap.bundle.min.js"></script>
   <script src="./particle-image.min.js"></script>
   <script src="./text-animation.js"></script>
 <script  type="module" src="./index.js"></script>
+<script src="./jquery.js"></script>
+    <script src="./script.js"></script>
+        <script src="./projects.js"></script>
+        <script src="arrow-menu.js"></script>
+        <script src="skills.js"></script>
+
+    
 </html>
