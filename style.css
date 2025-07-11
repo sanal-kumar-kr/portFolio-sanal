@@ -41,7 +41,7 @@ font-size: calc(0.5em + 0.5vw); }
   text-decoration: none;
 
   background: transparent; /* Button background */
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   border-radius: 50px;
   background-image:
  linear-gradient(rgb(1, 1, 46), rgb(1, 1, 46)),
@@ -360,12 +360,12 @@ background-color:transparent;
   font-family: 'Times New Roman', Times, serif !important;
   font-weight: bold;
   
-  font-size: 16px !important;
+  font-size: 0.8em !important;
   color: white !important;
   text-decoration: none !important;
 
   background: transparent !important; /* Button background */
-  border: 5px solid transparent !important;
+  border: 3px solid transparent !important;
   border-radius: 50px !important;
   background-image:
  linear-gradient(rgb(1, 1, 46), rgb(1, 1, 46)),
@@ -375,6 +375,10 @@ background-color:transparent;
   cursor: pointer !important;
   transition: 0.3s !important;
 
+}
+.view-more-content{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -449,6 +453,7 @@ background-color:transparent;
 /* Technical Skills Section */
 #skills {
   color: #fff;
+ 
 }
 
 #skills .main-heading {
@@ -516,12 +521,12 @@ background-color:transparent;
 
 .carousel-card {
   position: absolute;
-  top: 30%;
+  top: 38%;
   left: 50%;
   width: 90%;
   max-width: 35%;
   padding: 20px;
-  background: rgba(3, 63, 63, 0.721);
+  /* background: rgba(3, 63, 63, 0.721); */
   border: 1px solid #00ffff;
   backdrop-filter: blur(12px);
   border-radius: 15px;
@@ -670,23 +675,16 @@ footer .contact-div a:hover i {
   border-radius: 20px;
   font-weight: 500;
   background-color: #00ffff;
-  color: white;
+  color: black;
   white-space: nowrap;
   transform: scale(0.9);
-  background-image:
-    linear-gradient(rgb(1, 1, 46), rgb(1, 1, 46)), /* inner fill */
-    linear-gradient(45deg, rgb(224, 15, 165), rgb(7, 237, 237)); /* border gradient */
-      border: 5px solid transparent;
-
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  font-size: 0.9em;
+  
   
   cursor: pointer;
 }
 
-.circle-menu a:hover {
-  color: white;
-}
+
 
 /* Position each link */
 .circle-menu a:nth-child(1) { top: 10%; left: 43%; }
@@ -720,3 +718,5 @@ footer .contact-div a:hover i {
   #skills h4,h5{
     font-family: 'Times New Roman', Times, serif;
   }
+
+  
