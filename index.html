@@ -97,7 +97,7 @@
         </p>
 
         <!-- Resume Button -->
-        <a href="./Sanal_Kumar_KR_Resume.pdf" download class="btn resume ">
+        <a href="./Sanal_Kumar_KR_Resume.pdf" target="_blank" class="btn resume ">
           <i class="fas fa-download me-2"></i>Download Resume
         </a>
         <div id="particle-image" data-params-src="./params.json" class="text-wrap"></div>
@@ -767,6 +767,13 @@ fetch('/api/users', {
         <p><i class="bi bi-envelope me-2"></i> sanalkumaxxxxx@gmail.com</p>
         <p><i class="bi bi-phone me-2"></i> +91 7xxxxxxx78</p>
         <p><i class="bi bi-geo-alt me-2"></i> Thrissur, Kerala, India</p>
+<span id="email"></span>
+<script>
+  const user = "sanal";
+  const domain = "gmail.com";
+  const email = `${user}@${domain}`;
+  document.getElementById("email").innerHTML = `<a href="mailto:${email}">${email}</a>`;
+</script>
 
         <!-- Social Icons -->
         <div class="mt-3">
