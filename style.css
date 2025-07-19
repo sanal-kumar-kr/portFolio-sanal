@@ -28,7 +28,7 @@ font-size: calc(0.5em + 0.5vw); }
 
 .nav-link {
   width: 130px;       /* Adjust width as needed */
-  height: 48px;       /* Adjust height as needed */
+  height: 80%;       /* Adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@ font-size: calc(0.5em + 0.5vw); }
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   
-  font-size: 16px;
+  font-size: 1rem;
   color: white !important;
   text-decoration: none;
 
@@ -617,7 +617,7 @@ footer .contact-div a:hover i {
 /* Floating Arrow Button */
 .floating-nav-btn {
   position: fixed;
-  top: 40px;
+  top: 200px;
   right: 30px;
   z-index: 9999;
   background-color: #00ffff;
@@ -719,4 +719,9 @@ footer .contact-div a:hover i {
     font-family: 'Times New Roman', Times, serif;
   }
 
-  
+  .form-control{
+    border: 2px solid aqua !important;
+  }
+  button[type=submit]{
+    border: 1;
+  }

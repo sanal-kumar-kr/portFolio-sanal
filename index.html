@@ -23,14 +23,14 @@
 </head>
 <body>
   <!-- Contact Info Bar -->
-<div class="contact-bar  text-white py-1 px-3 d-flex justify-content-between align-items-center">
+<!-- <div class="contact-bar  text-white py-1 px-3 d-flex justify-content-between align-items-center">
   <div class="contact-left">
     <i class="fas fa-phone-alt me-2"></i> +91 70xxxxx678
   </div>
   <div class="contact-right">
     <i class="fas fa-envelope me-2"></i> sanalkumarxxxxxxx@gmail.com
   </div>
-</div>
+</div> -->
 
   <nav class="navbar navbar-expand-lg" id="navigation">
     <div class="container-fluid">
@@ -96,10 +96,10 @@
           With strong skills in Laravel, Codeigniter, and Django, I bring ideas to life through code that’s not just functional, but scalable and impactful.
         </p>
 
+
+
         <!-- Resume Button -->
-        <a href="./Sanal_Kumar_KR_Resume.pdf" target="_blank" class="btn resume ">
-          <i class="fas fa-download me-2"></i>Download Resume
-        </a>
+       
         <div id="particle-image" data-params-src="./params.json" class="text-wrap"></div>
 
         <!-- Social Icons -->
@@ -739,6 +739,7 @@ fetch('/api/users', {
  
 
 
+
 <footer class="transparent text-white pt-5 pb-3" id="footer">
   <div class="container">
     <div class="row">
@@ -755,25 +756,26 @@ fetch('/api/users', {
           <li><a href="#index" class="text-white text-decoration-none">Home</a></li>
           <li><a href="#experience" class="text-white text-decoration-none">Experience</a></li>
           <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
-
           <li><a href="#skills" class="text-white text-decoration-none">Skills</a></li>
           <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
         </ul>
       </div>
 
-      <!-- Contact Info -->
-      <div class="col-md-4 mb-4 contact-div">
-        <h5 class="text-aqua">Contact</h5>
-        <p><i class="bi bi-envelope me-2"></i> sanalkumaxxxxx@gmail.com</p>
-        <p><i class="bi bi-phone me-2"></i> +91 7xxxxxxx78</p>
-        <p><i class="bi bi-geo-alt me-2"></i> Thrissur, Kerala, India</p>
-<span id="email"></span>
-<script>
-  const user = "sanal";
-  const domain = "gmail.com";
-  const email = `${user}@${domain}`;
-  document.getElementById("email").innerHTML = `<a href="mailto:${email}">${email}</a>`;
-</script>
+      <!-- 📨 Get in Touch Form -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-aqua">Get in Touch</h5>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control bg-transparent text-white " placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control bg-transparent text-white " placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" rows="2" class="form-control bg-transparent text-white " placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn  btn-outline-info m-1 filter-btnt btn-sm">Send</button>
+        </form>
 
         <!-- Social Icons -->
         <div class="mt-3">
@@ -791,6 +793,7 @@ fetch('/api/users', {
   </div>
 </footer>
 
+
 <script src="./popper.min.js"></script>
   <script src="./bootstrap.bundle.min.js"></script>
   <script src="./particle-image.min.js"></script>
@@ -801,6 +804,6 @@ fetch('/api/users', {
         <script src="./projects.js"></script>
         <script src="arrow-menu.js"></script>
         <script src="skills.js"></script>
-
+\
     
 </html>
